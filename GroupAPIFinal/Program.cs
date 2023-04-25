@@ -1,14 +1,17 @@
+using FinalProjectNetAPI.Data;
 using Microsoft.EntityFrameworkCore;
-using System.Drawing.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
 
+public IConfiguration Configuration { get; }
+
 builder.Services.AddControllers();
+builder.Services.AddDbContext<UserLocationContext>(options =>
+    options.UseSqlServer(Configuration));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
 
 
 var app = builder.Build();
@@ -16,8 +19,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    //app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUi3();
 }
 
 app.UseHttpsRedirection();
