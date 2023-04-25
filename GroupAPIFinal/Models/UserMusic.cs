@@ -4,7 +4,7 @@ public class UserMusic
 {
     public int Id { get; set; }
 
-    public int User_id { get; set; }
+    public string FavBand { get; set; }
 
     public string FavArtist { get; set; }
 
