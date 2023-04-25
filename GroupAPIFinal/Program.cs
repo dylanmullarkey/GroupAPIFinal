@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<UserLocationContext>(options =>
-    options.UseSqlServer(GetConnectionString("UserLocationContext")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("UserLocationContext")));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
