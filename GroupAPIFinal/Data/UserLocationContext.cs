@@ -9,8 +9,10 @@ public class UserLocationContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        builder.Entity<UserLocationInfo>().HasData
-            (new UserLocationInfo { Id = 1, })
+        builder.Entity<UserLocationInfo>().HasData(
+            new UserLocationInfo { Id = 1, State = "Ohio", City = "Cincinnati", AreaCode = 513, ZipCode = 45244},
+            new UserLocationInfo { }//add new data here, copy line above and change fields
+            );
     }
 
     public DbSet<UserLocationInfo> Location { get; set; }
