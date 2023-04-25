@@ -8,7 +8,7 @@ public class GroupAPIFinalDbContext : DbContext
  : base(options)
 
     {
-
+        Database.EnsureCreated();
     }
     public DbSet<UserInfo> TeamMembers { get; set; }
 
