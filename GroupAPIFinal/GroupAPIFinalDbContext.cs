@@ -1,23 +1,23 @@
 ﻿using GroupAPIFinal.Models;
 using Microsoft.EntityFrameworkCore;
 
-public class GroupAPIFinalDbContext : DbContext
+public class GroupAPIFinalContext : DbContext
 {
-    public MyWebAPIDBContext(DbContextOptions<MyWebAPIDBContext> options)
+    public GroupAPIFinalContext(DbContextOptions<GroupAPIFinalContext> options)
 
  : base(options)
 
     {
         Database.EnsureCreated();
     }
-    public DbSet<UserInfo> TeamMembers { get; set; }
+    public DbSet<UserInfo> UserInfo { get; set; }
 
     public DbSet<UserLocationInfo> UserLocation { get; set; }
 
-    public DbSet<UserHobbies> Hobbies { get; set; }
+    public DbSet<UserHobbies> UserHobbies { get; set; }
 
-    public DbSet<UserFoods> Food { get; set; }
+    public DbSet<UserFoods> UserFoods { get; set; }
 
-    public DbSet<UserMusic> Music { get; set; }
+    public DbSet<UserMusic> UserMusic { get; set; }
 
 }
