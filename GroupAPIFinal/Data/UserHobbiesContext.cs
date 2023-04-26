@@ -12,8 +12,8 @@ namespace GroupAPIFinal.Data
         {
             builder.Entity<UserHobbies>().HasData(
                 new UserHobbies { Id = 1,Hobby1 = "Painting", Hobby2 = "Drawing", Hobby3 = "Photography", Hobby4 = "Knitting" },
-                new UserHobbies { Id = 2, Hobby1 = "Ohio", Hobby2 = "Milford", Hobby3 = 513, Hobby4 = 45150 },
-                new UserHobbies { Id = 3, Hobby1 = "Ohio", Hobby2 = "Columbus", Hobby3 = 614, Hobby4 = 43004 }//add new data here, copy line above and change fields
+                new UserHobbies { Id = 2, Hobby1 = "Video Games", Hobby2 = "Shopping", Hobby3 = "Hiking", Hobby4 = "Writing" },
+                new UserHobbies { Id = 3, Hobby1 = "Traveling", Hobby2 = "Biking", Hobby3 = "Golfing", Hobby4 = "Movie Watching" }//add new data here, copy line above and change fields
                 );
         }
 
