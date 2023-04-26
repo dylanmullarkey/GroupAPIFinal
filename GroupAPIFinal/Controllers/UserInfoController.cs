@@ -9,8 +9,8 @@ namespace GroupAPIFinal.Controllers
     {
 
         private readonly ILogger<UserInfoController> _logger;
-        private readonly UserInfoContext _context;
-        public UserInfoController(ILogger<UserInfoController> logger, UserInfoContext context)
+        private readonly FullContext _context;
+        public UserInfoController(ILogger<UserInfoController> logger, FullContext context)
         {
             _logger = logger;
             _context = context;
@@ -19,7 +19,7 @@ namespace GroupAPIFinal.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.Hobbies.ToList());
+            return Ok(_context.UserLocation.ToList());
         }
     }
 }
