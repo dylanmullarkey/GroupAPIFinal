@@ -36,6 +36,7 @@ public class FullContext : DbContext
 
     }
 
+
     public DbSet<UserFoods> Foods { get; set; }
     public DbSet<UserHobbies> Hobbies { get; set; }
     public DbSet<UserInfo> UserInfo { get; set; }
