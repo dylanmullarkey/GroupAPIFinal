@@ -1,6 +1,8 @@
 ﻿using GroupAPIFinal.Data;
+using GroupAPIFinal.Models;
 using GroupAPIFinal.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GroupAPIFinal.Controllers
 {
@@ -21,6 +23,35 @@ namespace GroupAPIFinal.Controllers
         public IActionResult Get()
         {
             return Ok(_context.GetHobbiess());
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutHobby(int id, UserHobbies hobby)
+        {
+            if (id != hobby.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(hobby).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UserHobbies(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
     }
 }
