@@ -23,7 +23,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUi3();
 }
 
-.Database.Migrate();
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<UserLocationContext>();
+    context.Database.Migrate();
+}
 
 app.UseHttpsRedirection();
 

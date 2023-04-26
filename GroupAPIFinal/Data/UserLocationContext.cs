@@ -11,7 +11,8 @@ public class UserLocationContext : DbContext
     {
         builder.Entity<UserLocationInfo>().HasData(
             new UserLocationInfo { Id = 1, State = "Ohio", City = "Cincinnati", AreaCode = 513, ZipCode = 45244},
-            new UserLocationInfo { }//add new data here, copy line above and change fields
+            new UserLocationInfo { Id = 2, State = "Ohio", City = "Milford", AreaCode = 513, ZipCode = 45150 },
+            new UserLocationInfo { Id = 3, State = "Ohio", City = "Columbus", AreaCode = 614, ZipCode = 43004 }//add new data here, copy line above and change fields
             );
     }
 

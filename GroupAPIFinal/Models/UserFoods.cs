@@ -9,7 +9,7 @@ public class UserFoods
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
-    public int User_id { get; set; }
+    public string FavMeal { get; set; }
 
     public string FavFruit { get; set; }
 
