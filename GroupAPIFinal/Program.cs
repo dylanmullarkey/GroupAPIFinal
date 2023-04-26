@@ -13,7 +13,7 @@ builder.Services.AddDbContext<FullContext>(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerDocument();
-builder.Services.AddScoped<IFullContextDAO, FullContext>();
+builder.Services.AddScoped<IFullContextDAO, FullContextDAO>();
 
 var app = builder.Build(); 
 

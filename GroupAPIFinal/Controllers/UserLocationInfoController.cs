@@ -1,4 +1,5 @@
 using GroupAPIFinal.Data;
+using GroupAPIFinal.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GroupAPIFinal.Controllers
@@ -9,8 +10,8 @@ namespace GroupAPIFinal.Controllers
     {
 
         private readonly ILogger<UserLocationInfoController> _logger;
-        private readonly FullContext _context; 
-        public UserLocationInfoController(ILogger<UserLocationInfoController> logger, FullContext context)
+        private readonly IFullContextDAO _context; 
+        public UserLocationInfoController(ILogger<UserLocationInfoController> logger, IFullContextDAO context)
         {
             _logger = logger;
             _context = context;
@@ -19,7 +20,7 @@ namespace GroupAPIFinal.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.UserLocation.ToList());
+            return Ok(_context.GetUserLocationInfos());
         }
     }
 }
