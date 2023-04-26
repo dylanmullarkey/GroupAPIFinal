@@ -23,7 +23,7 @@ namespace GroupAPIFinal.Controllers
             return Ok(_context.GetUserInfos());
         }
 
-        [HttpGet("id")]
+        /*[HttpGet("id")]
         public IActionResult GetById(int id) 
         {
             Var name = _context.Get
@@ -34,7 +34,7 @@ namespace GroupAPIFinal.Controllers
         public IActionResult Delete(int ) 
         {
 
-        }
+        } */
     }
 }
 
