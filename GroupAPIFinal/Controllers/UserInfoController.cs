@@ -19,7 +19,7 @@ namespace GroupAPIFinal.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.Hobbies.ToList());
+            return Ok(_context.UserInfo.ToList());
         }
     }
 }

@@ -1,13 +1,14 @@
-﻿namespace GroupAPIFinal.Models;
-
-public class UserLocationInfo
+﻿namespace GroupAPIFinal.Models
 {
-    public int Id { get; set; }
-    public string? State { get; set; }
+    public class UserLocationInfo
+    {
+        public int Id { get; set; }
+        public string? State { get; set; }
 
-    public string? City { get; set; }
+        public string? City { get; set; }
 
-    public int AreaCode { get; set; }
+        public int AreaCode { get; set; }
 
-    public int ZipCode { get; set; }
+        public int ZipCode { get; set; }
+    }
 }

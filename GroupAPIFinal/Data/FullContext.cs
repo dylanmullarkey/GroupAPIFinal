@@ -1,6 +1,5 @@
 ﻿using GroupAPIFinal.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration.UserSecrets;
 
 namespace GroupAPIFinal.Data;
 public class FullContext : DbContext
