@@ -10,7 +10,6 @@ namespace GroupAPIFinal.Data
         {
             _context = context;
         }
-
         public List<UserInfo> GetUserInfos()
         {
             return _context.UserInfo.ToList();

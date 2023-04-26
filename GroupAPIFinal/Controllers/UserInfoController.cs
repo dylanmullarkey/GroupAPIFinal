@@ -23,18 +23,6 @@ namespace GroupAPIFinal.Controllers
             return Ok(_context.GetUserInfos());
         }
 
-        [HttpGet("id")]
-        public IActionResult GetById(int id) 
-        {
-            Var name = _context.Get
-        }
-
-
-        [HttpDelete] 
-        public IActionResult Delete(int ) 
-        {
-
-        }
     }
 }
 
