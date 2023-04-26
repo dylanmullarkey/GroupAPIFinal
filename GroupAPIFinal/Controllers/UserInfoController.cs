@@ -1,4 +1,5 @@
 ﻿using GroupAPIFinal.Data;
+using GroupAPIFinal.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GroupAPIFinal.Controllers
@@ -9,8 +10,8 @@ namespace GroupAPIFinal.Controllers
     {
 
         private readonly ILogger<UserInfoController> _logger;
-        private readonly FullContext _context;
-        public UserInfoController(ILogger<UserInfoController> logger, FullContext context)
+        private readonly IFullContextDAO _context;
+        public UserInfoController(ILogger<UserInfoController> logger, IFullContextDAO context)
         {
             _logger = logger;
             _context = context;
@@ -19,7 +20,22 @@ namespace GroupAPIFinal.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.UserInfo.ToList());
+            return Ok(_context.GetUserInfos());
+        }
+
+        [HttpGet("id")]
+        public IActionResult GetById(int id) 
+        {
+            Var name = _context.Get
+        }
+
+
+        [HttpDelete] 
+        public IActionResult Delete(int ) 
+        {
+
         }
     }
 }
+
+
