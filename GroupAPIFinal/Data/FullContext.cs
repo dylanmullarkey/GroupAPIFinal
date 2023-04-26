@@ -20,7 +20,7 @@ public class FullContext : DbContext
             );
         builder.Entity<UserInfo>().HasData(
             new UserInfo { Id = 1, Name = "Drew Rawlins", Birthdate = "June 3rd 2003", Major = "Information Technology", year = 2025 },
-            new UserInfo { Id = 2, Name = "Jacob Collier", Birthdate = "November 18th 2002", Major = "Information Technology", year = 2025 },
+            new UserInfo { Id = 2, Name = "Jacob Collier", Birthdate = "January 12th 2002", Major = "Information Technology", year = 2025 },
             new UserInfo { Id = 3, Name = "Dylan Mullarkey", Birthdate = "January 22nd 2003", Major = "Information Technology", year = 2025 }//add new data here, copy line above and change fields
             );
         builder.Entity<UserLocationInfo>().HasData(
