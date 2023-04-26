@@ -31,8 +31,8 @@ public class FullContext : DbContext
             );
         builder.Entity<UserMusic>().HasData(
             new UserMusic { Id = 1, FavBand = "The Beatles", FavArtist = "Elvis Pressley", FavSong = "Here Comes The Sun", FavGenre = "Classic" },
-            new UserMusic { Id = 1, FavBand = "Dave Matthews Band", FavArtist = "Micheal Jackson", FavSong = "Billie Jean", FavGenre = "Pop" },
-            new UserMusic { Id = 1, FavBand = "AC/DC", FavArtist = "George Strait", FavSong = "Troubadour", FavGenre = "Country" }
+            new UserMusic { Id = 2, FavBand = "Dave Matthews Band", FavArtist = "Micheal Jackson", FavSong = "Billie Jean", FavGenre = "Pop" },
+            new UserMusic { Id = 3, FavBand = "AC/DC", FavArtist = "George Strait", FavSong = "Troubadour", FavGenre = "Country" }
             );
 
     }
