@@ -19,7 +19,7 @@ namespace GroupAPIFinal.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.UserLocationInfo.ToList());
+            return Ok(_context.Location.ToList());
         }
     }
 }
