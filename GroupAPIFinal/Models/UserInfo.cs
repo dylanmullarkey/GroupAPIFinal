@@ -6,7 +6,7 @@
 
         public string? Name { get; set; }
 
-        public DateTime Birthdate { get; set; }
+        public string Birthdate { get; set; }
 
         public string? Major { get; set; }
 

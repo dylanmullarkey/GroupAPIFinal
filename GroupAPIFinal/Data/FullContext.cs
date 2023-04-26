@@ -20,9 +20,9 @@ public class FullContext : DbContext
             new UserHobbies { Id = 3, Hobby1 = "Traveling", Hobby2 = "Biking", Hobby3 = "Golfing", Hobby4 = "Movie Watching" }//add new data here, copy line above and change fields
             );
         builder.Entity<UserInfo>().HasData(
-            new UserInfo { Id = 1, Name = "Drew Rawlins", Birthdate = 2003 / 6 / 03, Major = "Information Technology", year = 2025 },
-            new UserInfo { Id = 2, Name = "Jacob Collier", Birthdate = 2002 / 11 / 18, Major = "Information Technology", year = 2025 },
-            new UserInfo { Id = 3, Name = "Dylan Mullarkey", Birthdate = , Major = "Information Technology", year = 2025 }//add new data here, copy line above and change fields
+            new UserInfo { Id = 1, Name = "Drew Rawlins", Birthdate = "June 3rd 2003", Major = "Information Technology", year = 2025 },
+            new UserInfo { Id = 2, Name = "Jacob Collier", Birthdate = "November 18th 2002", Major = "Information Technology", year = 2025 },
+            new UserInfo { Id = 3, Name = "Dylan Mullarkey", Birthdate = "January 22nd 2003", Major = "Information Technology", year = 2025 }//add new data here, copy line above and change fields
             );
         builder.Entity<UserLocationInfo>().HasData(
             new UserLocationInfo { Id = 1, State = "Ohio", City = "Cincinnati", AreaCode = 513, ZipCode = 45244 },
