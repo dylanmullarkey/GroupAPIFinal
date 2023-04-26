@@ -1,5 +1,6 @@
 
 using GroupAPIFinal.Data;
+using GroupAPIFinal.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +13,7 @@ builder.Services.AddDbContext<FullContext>(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerDocument();
-
+builder.Services.AddScoped<IFullContextDAO, FullContext>();
 
 var app = builder.Build(); 
 
