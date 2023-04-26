@@ -1,4 +1,4 @@
-using FinalProjectNetAPI.Data;
+using GroupAPIFinal.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GroupAPIFinal.Controllers
