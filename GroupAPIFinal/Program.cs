@@ -6,8 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<UserLocationContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("UserLocationContext")));
+builder.Services.AddDbContext<FullContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("FullContext")));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -28,7 +28,7 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
 
-    var context = services.GetRequiredService<UserLocationContext>();
+    var context = services.GetRequiredService<FullContext>();
     context.Database.Migrate();
 }
 

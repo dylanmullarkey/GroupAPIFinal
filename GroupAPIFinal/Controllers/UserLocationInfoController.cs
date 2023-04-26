@@ -9,8 +9,8 @@ namespace GroupAPIFinal.Controllers
     {
 
         private readonly ILogger<UserLocationInfoController> _logger;
-        private readonly UserLocationContext _context; 
-        public UserLocationInfoController(ILogger<UserLocationInfoController> logger, UserLocationContext context)
+        private readonly FullContext _context; 
+        public UserLocationInfoController(ILogger<UserLocationInfoController> logger, FullContext context)
         {
             _logger = logger;
             _context = context;
@@ -19,7 +19,7 @@ namespace GroupAPIFinal.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.Location.ToList());
+            return Ok(_context.UserLocation.ToList());
         }
     }
 }
