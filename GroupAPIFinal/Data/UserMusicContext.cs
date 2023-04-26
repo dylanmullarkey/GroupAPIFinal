@@ -1,5 +1,4 @@
-﻿using FinalProjectNetAPI.Data;
-using GroupAPIFinal.Models;
+﻿using GroupAPIFinal.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace GroupAPIFinal.Data

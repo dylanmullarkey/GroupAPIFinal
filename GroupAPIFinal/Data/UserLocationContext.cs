@@ -1,7 +1,7 @@
 ﻿using GroupAPIFinal.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace FinalProjectNetAPI.Data;
+namespace GroupAPIFinal.Data;
 
 public class UserLocationContext : DbContext
 {
