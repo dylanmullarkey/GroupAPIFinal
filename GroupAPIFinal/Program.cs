@@ -12,14 +12,13 @@ builder.Services.AddEndpointsApiExplorer();
 
 
 
-var app = builder.Build();
-
-Var context = 
+var app = builder.Build(); 
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
+    //app.UseSwagger();
+    app.UseOpenApi();
     app.UseSwaggerUi3();
 }
 
